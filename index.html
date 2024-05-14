@@ -31,6 +31,7 @@
             }
             if(urlParams.has('logo')){
                 l = urlParams.get('logo');
+                console.log({l})
                 if( l === 'white' || l === 'black'){
                     document.getElementById('logo').src = `/wvision_logos_all/wvisionco_logo_${l}_transparent.png`
                 } else {
