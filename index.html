@@ -19,10 +19,9 @@
 </head>
 <body>
    <img id="logo" src="./wvision_logos_all/wvisionco_logo_black_transparent.png" alt="logo"/> 
-   <script>
+   <script language="javascript">
         const urlParams = new URLSearchParams(window.location.search);
-
-        window.onLoad = function(){
+        document.addEventListener("DOMContentLoaded", () => {
             if(urlParams.has('width')){
                 w = urlParams.get('width');
             }
@@ -38,7 +37,7 @@
                     console.log('color not valid')
                 }
             }
-        }
+        });
     </script>
 </body>
 </html>
