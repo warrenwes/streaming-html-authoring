@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straming Graphics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            margin: 1%;
+            float: right;
+        }
+    </style>
+   
+</head>
+<body>
+   <img id="logo" src="/wvision_logos_all/wvisionco_logo_black_transparent.png" alt="logo"/> 
+   <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        window.onLoad = function(){
+            if(urlParams.has('width')){
+                w = urlParams.get('width');
+            }
+            if(urlParams.has('height')){
+                h = urlParams.get('height');
+            }
+            if(urlParams.has('logo')){
+                l = urlParams.get('logo');
+                if( l === 'white' || l === 'black'){
+                    document.getElementById('logo').src = `/wvision_logos_all/wvisionco_logo_${l}_transparent.png`
+                } else {
+                    console.log('color not valid')
+                }
+            }
+        }
+    </script>
+</body>
+</html>
